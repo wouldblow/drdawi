@@ -1,0 +1,130 @@
+body {
+    background: #000;
+}
+
+h1 {
+    display: block;
+    position: relative;
+    margin-top: 350px;
+    font-size: 90px;
+    left: -50px;
+    text-align: center;
+    font-family: "Pacifico", cursive;
+    font-weight: 600;
+    font-style: normal;
+    color: rgb(216, 147, 248);
+    text-shadow: rgb(174, 0, 255) 3px 0 10px;
+    transform: skew(-10deg, -10deg);
+    z-index: 111111;
+    width: 800px;
+}
+
+
+h2 {
+    display: block;
+    position: relative;
+    left: -50px;
+    margin-top: 400px;
+    font-size:30px;
+    text-align: center;
+    font-family: "Days One", sans-serif;
+    font-weight: 900;
+    font-style: normal;
+    color: rgb(211, 206, 214);
+    text-shadow: rgb(174, 0, 255) 3px 0 10px;
+    z-index: 9999;
+}
+
+img {
+    width: 280px;
+    box-shadow: 0px 5px 10px 2px rgba(34, 60, 80, 0.2);
+}
+
+div {
+    width: 280px;
+    background: rgb(216, 216, 216);
+    height: 400px;
+    padding: 8px 8px 25px 8px;
+    transition: transform 0.3s ease;
+    animation: applyTransform 3s ease forwards;
+}
+
+.q, .w, .e, .r, .t, .y {
+    animation-delay: 1s;
+}
+
+.q {
+    transform: none;
+    position: absolute;
+    top: 30px;
+    left: 30px;
+}
+
+.w {
+    transform: none;
+    position: absolute;
+    top: 460px;
+    left: 500px;
+}
+
+.e {
+    transform: none;
+    position: absolute;
+    top: 1000px;
+    left: 400px;
+}
+
+.r {
+    transform: none;
+    position: absolute;
+    top: 1200px;
+    left: 10px;
+}
+
+.t {
+    transform: none;
+    position: absolute;
+    top: 600px;
+    left: 10px;
+}
+
+.y {
+    transform: none;
+    position: absolute;
+    top: 20px;
+    left: 400px;
+}
+
+@keyframes applyTransform {
+    0% {
+        transform: none;
+    }
+    100% {
+        transform: var(--transform);
+    }
+}
+
+/* Assigning the original transforms as custom properties */
+.q {
+    --transform: skew(-5deg, -10deg);
+}
+
+.w {
+    --transform: skew(5deg, -10deg);
+}
+
+.e {
+    --transform: skew(-5deg, 10deg);
+}
+
+.r {
+    --transform: skew(5deg, -10deg);
+}
+
+.t {
+    --transform: skew(-5deg, 10deg);
+}
+
+.y {
+    --transform: skew(10deg, -10deg);
+}
